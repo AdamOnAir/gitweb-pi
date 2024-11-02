@@ -64,3 +64,43 @@ On client :
 cd my_repo
 git add remote pi ssh://git@<PI_IP_or_hostname>/home/git/repos/my_repo.git
 ```
+
+## gitweb.conf example
+
+```conf
+# path to git projects (<project>.git)
+our $projectroot = "/home/git";
+
+# directory to use for temp files
+$git_temp = "/tmp";
+
+@diff_opts = ();
+
+# Features
+$feature{'blame'}{'default'} = [1];
+$feature{'blame'}{'override'} = 1;
+
+$feature{'log'}{'default'} = [1];
+$feature{'log'}{'override'} = 1;
+
+$feature{'grep'}{'default'} = [1];
+$feature{'grep'}{'override'} = 1;
+
+$feature{'highlight'}{'default'} = [1];
+$feature{'highlight'}{'override'} = 1;
+
+$feature{'heads'}{'default'} = [1];
+$feature{'heads'}{'override'} = 1;
+
+$feature{'tags'}{'default'} = [1];
+$feature{'tags'}{'override'} = 1;
+
+$feature{'commitdiff'}{'default'} = [1];
+$feature{'commitdiff'}{'override'} = 1;
+
+$feature{'snapshot'}{'default'} = ['zip', 'tgz'];
+$feature{'snapshot'}{'override'} = 1;
+
+# Sitename
+our $site_name = "Git server";
+```
