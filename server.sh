@@ -26,9 +26,10 @@ mkdir ~/repos/
 
 # Configure gitweb
 echo "our $projectroot = "/home/git";" >| /etc/gitweb.conf
+chmod 777 /home/git
 
 # Start apache2
-systemctl start apache2
+systemctl start apache2 | service apache2 start
 
 # Email SSH
 ssh-keygen -C $email
