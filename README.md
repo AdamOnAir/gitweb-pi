@@ -34,6 +34,7 @@ git update-server-info
 logout
 
 # Configure gitweb
+chmod 777 /home/git
 vi /etc/gitweb.conf # edit $projectroot to be /home/git/repos
 
 # Start apache2
