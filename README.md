@@ -62,7 +62,7 @@ And refresh the [page](http://PI_IP/gitweb)
 On client :
 ```bash
 cd my_repo
-git add remote pi ssh://git@<PI_IP_or_hostname>/home/git/repos/my_repo.git
+git remote add pi ssh://git@<PI_IP_or_hostname>/home/git/repos/my_repo.git
 ```
 
 ## gitweb.conf example
