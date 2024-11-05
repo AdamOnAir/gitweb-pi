@@ -45,7 +45,8 @@ ssh-keygen -C "youremail@mailprovider.com"
 cat ~/.ssh/id_rsa.pub | ssh git@<PI_IP_or_hostname> "cat >> ~/.ssh/authorized_keys"
 ```
 
-On client :
+> [!NOTE]  
+> Run the following on client computer.
 ```bash
 # Clone and add
 
